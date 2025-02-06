@@ -12,9 +12,6 @@ class Refrigerante extends Bebida
         return "R";
     }
 
-    public function getA() {
-        return $this->sabor;
-    }
 
     /**
      * Get the value of sabor

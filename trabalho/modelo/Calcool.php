@@ -1,19 +1,19 @@
 <?php
 
-require_once ("Bebida.php");
+require_once("Bebida.php");
 
 
-class Calcool extends Bebida {
+class Calcool extends Bebida
+{
 
     private string $pctAlcool;
 
 
-        public function getTipo() {
-            return "A";
-        }
-        public function getA() {
-            return $this->pctAlcool;
-        }
+    public function getTipo()
+    {
+        return "A";
+    }
+
     /**
      * Get the value of pctAlcool
      */
@@ -31,5 +31,4 @@ class Calcool extends Bebida {
 
         return $this;
     }
-        }
-    
+}

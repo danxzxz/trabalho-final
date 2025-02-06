@@ -10,15 +10,14 @@ abstract class Bebida{
 
 
     public abstract function getTipo();
-    public abstract function getA();
 
 
 
 
     public function __toString() {
-        return sprintf("%d- %s | %s | %s | %s \n",
+        return sprintf("%d- %s | %s | %s  \n",
                         $this->id, $this->getTipo(), $this->nome,
-                        $this->ml, $this->getA());
+                        $this->ml);
     }
     
 

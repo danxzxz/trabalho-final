@@ -12,9 +12,7 @@ class Suco extends Bebida
         return "S";
     }
 
-    public function getA() {
-        return $this->sabor;
-    }
+
 
     /**
      * Get the value of sabor

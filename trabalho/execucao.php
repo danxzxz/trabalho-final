@@ -13,7 +13,7 @@ require_once ("dao/BebidaDAO.php");
 $opcao = 0;
 
 do {
-    echo "\n--------------BEBIDARIA DO DAN--------------\n";
+    echo "\n\n\n--------------BEBIDARIA DO DAN--------------\n";
     echo "1- Inserir bebida\n";
     echo "2- Listar Bebidas\n";
     echo "3- Buscar Bebidas\n";
@@ -69,6 +69,10 @@ do {
             $bebidaDAO = new BebidaDAO();
             $bebidas = $bebidaDAO->listarBebidas();
 
+            foreach ($bebidas as $b) {
+                echo "ID: {$b->getId()} | Tipo: {$b->getTipo()} | Nome: {$b->getNome()} | ML: {$b->getMl()} | Quantidade: {$b->getQuantidade()}\n";
+            }
+
             break;
 
 
@@ -91,6 +95,10 @@ do {
             $bebidaDAO = new BebidaDAO();
             $bebidas = $bebidaDAO->listarBebidas();
 
+            foreach ($bebidas as $b) {
+                echo "ID: {$b->getId()} | Tipo: {$b->getTipo()} | Nome: {$b->getNome()} | ML: {$b->getMl()} | Quantidade: {$b->getQuantidade()}\n";
+            }
+
              $id = readline("Informe o ID do bebida que deseja excluir: ");
 
 
@@ -105,7 +113,11 @@ do {
 
              case 5:
                 $bebidas = $bebidaDAO->listarBebidas();
-                $id = readline("Informe o ID da bebida que deseja vender: ");
+
+                foreach ($bebidas as $b) {
+                    echo "ID: {$b->getId()} | Tipo: {$b->getTipo()} | Nome: {$b->getNome()} | ML: {$b->getMl()} | Quantidade: {$b->getQuantidade()}\n";
+                }
+                    $id = readline("Informe o ID da bebida que deseja vender: ");
                 $quantidade = readline("Informe a quantidade a vender: ");
                 $bebidaDAO = new BebidaDAO();
                 if ($bebidaDAO->venderBebida($id, $quantidade)) {
