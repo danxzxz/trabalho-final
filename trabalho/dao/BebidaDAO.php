@@ -121,6 +121,7 @@ class BebidaDAO
             $bebida->setId($reg['id']);
             $bebida->setNome($reg['nome']);
             $bebida->setMl($reg['ml']);
+            $bebida->setQuantidade($reg['quantidade']);
             array_push($bebidas, $bebida);
         }
         return $bebidas;
